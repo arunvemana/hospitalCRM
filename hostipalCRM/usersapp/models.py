@@ -101,7 +101,7 @@ class Doctor(Clients):
 
     def save(self, *args, **kwargs):
         if not self.pk:
-            self.Types = Clients.Types.DOCTOR
+            self.type = Clients.Types.DOCTOR
         return super().save(*args, **kwargs)
 
 
@@ -122,7 +122,7 @@ class Patient(Clients):
 
     def save(self, *args, **kwargs):
         if not self.pk:
-            self.Types = Clients.Types.PATIENT
+            self.type = Clients.Types.PATIENT
         return super().save(*args, **kwargs)
 
 
@@ -139,5 +139,5 @@ class Staff(Clients):
 
     def save(self, *args, **kwargs):
         if not self.pk:
-            self.Types = Clients.Types.STAFF
+            self.type = Clients.Types.STAFF
         return super().save(*args, **kwargs)

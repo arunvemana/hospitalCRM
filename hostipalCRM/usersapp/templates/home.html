@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+    <H1>YOU BELONG TO ?</H1>
+    <form action="{%url 'REGISTER' 'DOCTOR' %}">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+        DOCTOR
+      </button>
+    </form>
+    <form action="{%url 'REGISTER' 'PATIENT' %}">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+        PATIENT
+      </button>
+    </form>
+    </form>
+    <form action="{%url 'REGISTER' 'STAFF' %}">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+        STAFF
+      </button>
+    </form>
+    <h1>here you can Enter</h1>
+    <a href="{% url 'login'%}">SINGIN</a> </body>
+
+
+</html>
