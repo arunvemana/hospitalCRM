@@ -68,6 +68,7 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'usersapp.Clients'
 WSGI_APPLICATION = 'hostipalCRM.wsgi.application'
 
 
