@@ -20,11 +20,11 @@ def login(request):
             if client.password == password:
                 # password was correct
                 if client.type == "DOCTOR":
-                    return render(request, 'dashboard.html', {'name': 'Doctor'})
+                    return render(request, 'dashboard.html', {'name': client.username})
                 elif client.type == "PATIENT":
-                    return render(request, 'dashboard.html', {'name': 'Patient'})
+                    return render(request, 'dashboard.html', {'name': client.username})
                 elif client.type == "STAFF":
-                    return render(request, 'dashboard.html', {'name': 'Staff'})
+                    return render(request, 'dashboard.html', {'name': client.username})
                 else:
                     return HttpResponse("yourn't belong here, check your type")
             return HttpResponse("pasword is not match or email doesn't exist")
